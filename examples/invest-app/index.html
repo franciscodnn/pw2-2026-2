@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investimentos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" />
+</head>
+
+<body>
+  <template id="investment-card-template">
+    <div>
+      <div class="relative bg-white shadow-md rounded-lg p-4">
+        <div class="flex justify-between items-start gap-3">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700" data-name></h3>
+            <p class="text-lg font-semibold text-gray-700" data-value></p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p class="text-sm text-gray-500" data-origin>
+            <span class="font-bold">Origem:</span> 
+          </p>
+          <p class="text-sm text-gray-500" data-category>
+            <span class="font-bold">Categoria:</span>
+          </p>
+          <p class="text-sm text-gray-500" data-date>
+            <span class="font-bold">Data:</span>
+          </p>
+          <p class="text-sm text-gray-500" data-interest>
+            <span class="font-bold">Taxa:</span>
+          </p>
+        </div>
+        <button type="button" class="absolute bottom-4 right-4 text-gray-500 hover:text-red-700 transition" aria-label="Apagar investimento">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+      </div>
+    </div>
+
+  </template>
+  <div class="container lg:max-w-screen-lg mx-auto">
+    <h1 class="text-center text-2xl my-12 font-bold">Investimentos</h1>
+    <div class="flex justify-end mb-6">
+      <button
+        id="btnAdd"
+        type="button"
+        class="bg-gray-500 hover:bg-gray-700 text-white font-semibold px-4 py-2 rounded-full shadow-md transition">
+        +
+      </button>
+    </div>
+    <div class="investments grid grid-cols-3 gap-3">
+      <div>
+        <div class="relative bg-white shadow-md rounded-lg p-4">
+          <div class="flex justify-between items-start gap-3">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-700">Tesouro Selic 2029</h3>
+              <p class="text-lg font-semibold text-gray-700">R$ 100</p>
+            </div>
+          </div>
+          <div class="mt-4">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Origem:</span> Tesouro Nacional
+            </p>
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Categoria:</span> Pos
+            </p>
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Data:</span> 22/03/2023
+            </p>
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Taxa:</span> 100% Selic
+            </p>
+          </div>
+          <button type="button" class="absolute bottom-4 right-4 text-gray-500 hover:text-red-700 transition" aria-label="Apagar investimento">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="relative bg-white shadow-md rounded-lg p-4">
+          <div class="flex justify-between items-start gap-3">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-700">Tesouro IPCA 2029</h3>
+              <p class="text-lg font-semibold text-gray-700">R$ 100</p>
+            </div>
+          </div>
+          <div class="mt-4">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Origem:</span> Tesouro Nacional
+            </p>
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Categoria:</span> IPCA
+            </p>
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Data:</span> 22/03/2023
+            </p>
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Taxa:</span> IPCA + 5,83%
+            </p>
+          </div>
+          <button type="button" class="absolute bottom-4 right-4 text-gray-500 hover:text-red-700 transition" aria-label="Apagar investimento">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <script src="./js/main.js" type="module"></script>
+  </div>
+</body>
+
+</html>

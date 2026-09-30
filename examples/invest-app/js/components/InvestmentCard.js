@@ -36,11 +36,12 @@ export function InvestmentCard({ id, name, value, origin, category, date, intere
   const template = document.querySelector('#investment-card-template');
   const clone = template.content.cloneNode(true);
 
+  // <div data-id = "id" >
   clone.firstElementChild.dataset.id = id;
 
   clone.querySelector('[data-name]').textContent = name;
   clone.querySelector('[data-value]').textContent = `R$ ${value.toFixed(2)}`;
-  clone.querySelector('[data-origin]').textContent = `Origem: ${origin}`;
+  clone.querySelector('[data-origin] > span').textContent = `Origem: ${origin}`;
   clone.querySelector('[data-category]').textContent = `Categoria: ${category}`;
   clone.querySelector('[data-date]').textContent = `Data: ${date}`;
   clone.querySelector('[data-interest]').textContent = `Taxa: ${interest}`;

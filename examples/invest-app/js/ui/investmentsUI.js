@@ -26,8 +26,6 @@ function createInvestmentCard(investment) {
 function removeInvestmentCard(id) {
   Storage.remove(id);
   document.querySelector(`[data-id="${id}"]`)?.remove();
-
-  console.log('removing...');
 }
 
 export { load, createInvestmentCard, removeInvestmentCard };

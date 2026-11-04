@@ -1,5 +1,5 @@
 export interface InvestmentCardModel {
-  id?: number;
+  id: number;
   name: string;
   value: number;
   origin: string;

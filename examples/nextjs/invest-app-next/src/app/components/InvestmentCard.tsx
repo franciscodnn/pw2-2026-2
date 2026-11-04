@@ -1,7 +1,16 @@
 import { InvestmentCardModel } from "@/data/data";
 
+/*
 export function InvestmentCard({ name, value, 
     origin, category, date, interest }: Partial<InvestmentCardModel>) {
+*/
+export function InvestmentCard({ id=-1, name, value, 
+    origin, category, date, interest, hidden }: { 
+      id: number | undefined, 
+      name: string, value: string, 
+      origin: string, category: string, 
+      date: string, interest: string, 
+      hidden: string }) {
     // const name: string = props.name;
     // const value: number = Number(props.value);
     // const origin: string = 'Tesouro Nacional';

@@ -1,16 +1,15 @@
 import { InvestmentCardModel } from "@/data/data";
 
-/*
-export function InvestmentCard({ name, value, 
-    origin, category, date, interest }: Partial<InvestmentCardModel>) {
-*/
-export function InvestmentCard({ id=-1, name, value, 
+
+// export function InvestmentCard({ name, value, 
+//     origin, category, date, interest, hidden = false }: Partial<InvestmentCardModel> & { hidden?: boolean }) {
+export function InvestmentCard({ id, name, value, 
     origin, category, date, interest, hidden }: { 
-      id: number | undefined, 
-      name: string, value: string, 
+      id: number, 
+      name: string, value: number, 
       origin: string, category: string, 
       date: string, interest: string, 
-      hidden: string }) {
+      hidden: boolean }) {
     // const name: string = props.name;
     // const value: number = Number(props.value);
     // const origin: string = 'Tesouro Nacional';
@@ -28,7 +27,7 @@ export function InvestmentCard({ id=-1, name, value,
       <div className="flex justify-between items-start gap-3">
         <div>
           <h3 className="text-lg font-semibold text-gray-700">{name}</h3>
-          <p className="text-lg font-semibold text-gray-700">R$ {Number(value).toFixed(2)}</p>
+          <p className="text-lg font-semibold text-gray-700">R$ {hidden ? '*****' : Number(value).toFixed(2) }</p>
         </div>
       </div>
       <div className="mt-4">

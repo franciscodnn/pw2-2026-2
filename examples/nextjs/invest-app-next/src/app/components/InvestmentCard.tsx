@@ -10,16 +10,6 @@ export function InvestmentCard({ id, name, value,
       origin: string, category: string, 
       date: string, interest: string, 
       hidden: boolean }) {
-    // const name: string = props.name;
-    // const value: number = Number(props.value);
-    // const origin: string = 'Tesouro Nacional';
-    // let category: string = 'Pos'; // inferência a partir do conteúdo inicializado
-    // const date = '2023-03-22';
-    // const interest = '100% Selic';
-
-    // category = 1;
-
-    // console.log(props.valor, ': ', typeof Number(props.valor));
 
   return (
   <div>

@@ -1,15 +1,22 @@
 import { InvestmentCardModel } from "@/data/data";
+import { useEffect } from "react";
 
+type InvestmentCardProps = Partial<InvestmentCardModel> & { hidden?: boolean };
 
-// export function InvestmentCard({ name, value, 
-//     origin, category, date, interest, hidden = false }: Partial<InvestmentCardModel> & { hidden?: boolean }) {
-export function InvestmentCard({ id, name, value, 
-    origin, category, date, interest, hidden }: { 
-      id: number, 
-      name: string, value: number, 
-      origin: string, category: string, 
-      date: string, interest: string, 
-      hidden: boolean }) {
+export function InvestmentCard({ name, value, 
+    origin, category, date, interest, hidden = false }: InvestmentCardProps) {
+
+  useEffect(
+    () => {
+      const handleResizeEvent = () => console.log('Resized to: ', window.innerWidth, 'x', window.innerHeight)
+
+      window.addEventListener('resize', handleResizeEvent);
+
+      return () => {
+        window.removeEventListener('resize', handleResizeEvent);
+        console.log('Removed resize event listener');
+      }
+    });
 
   return (
   <div>

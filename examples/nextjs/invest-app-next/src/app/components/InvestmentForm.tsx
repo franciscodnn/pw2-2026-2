@@ -11,7 +11,7 @@ type InvestmentFormProps = {
 };
 
 const EMPTY_FORM: InvestmentFormData = {
-  name: '',
+  name: 'teste',
   value: 0,
   origin: '',
   category: '',
@@ -30,7 +30,7 @@ export function InvestmentForm({ onSubmit, onCancel }: InvestmentFormProps) {
     event: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) {
     const { name, value } = event.target;
-    setForm({ ...form, [name]: name === 'value' ? Number(value) : value });
+    setForm({ ...form, [name]: name === 'value' ? Number(value) : value });    
   }
 
   function handleSubmit(event: SubmitEvent<HTMLFormElement>) {

@@ -29,9 +29,16 @@ export default function Public() {
     const nextId = Math.max(0, ...investments.map((i) => i.id)) + 1;
     const investment: InvestmentCardModel = { id: nextId, ...data };
     
+    // initialInvestments.push(investment);
+    // setInvestments([...initialInvestments]); // novo array => React re-renderiza
+
+    // OU
     setInvestments([...investments, investment]); // novo array => React re-renderiza
+    
     setShowModal(false);
   }
+
+  console.log( `Initial investments: ${initialInvestments}` );
 
   return (
     <>

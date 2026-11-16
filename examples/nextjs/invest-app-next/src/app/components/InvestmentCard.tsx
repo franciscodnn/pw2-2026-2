@@ -1,10 +1,13 @@
 import { InvestmentCardModel } from "@/data/data";
 import { useEffect } from "react";
+import { useHiddenValue } from "@/app/_context/HiddenValueContext";
 
-type InvestmentCardProps = Partial<InvestmentCardModel> & { hidden?: boolean };
+type InvestmentCardProps = Partial<InvestmentCardModel>;
 
 export function InvestmentCard({ name, value, 
-    origin, category, date, interest, hidden = false }: InvestmentCardProps) {
+    origin, category, date, interest }: InvestmentCardProps) {
+
+  const { hidden } = useHiddenValue();
 
   useEffect(
     () => {

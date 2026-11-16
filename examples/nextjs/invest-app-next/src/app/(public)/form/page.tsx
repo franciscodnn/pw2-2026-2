@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { InvestmentCardModel, investments } from '@/data/data';
 import { InvestmentForm, InvestmentFormData } from '@/app/components/InvestmentForm';
+// import { useInvestmentContext } from '@/app/_context/InvestmentContext';
 import { useInvestmentContext } from '@/app/_context/InvestmentContext';
 
 export default function FormPage() {
@@ -14,7 +15,9 @@ export default function FormPage() {
     const investment: InvestmentCardModel = { id: nextId, ...data };
 
     setInvestments([...investments, investment]);
-    // router.push('/');
+
+    console.log( investments );
+    router.push('/');
   }
 
   return (

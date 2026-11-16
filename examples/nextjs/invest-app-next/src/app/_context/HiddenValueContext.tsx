@@ -33,5 +33,5 @@ export function useHiddenValue() {
   if (!context) {
     throw new Error('useHiddenValue must be used within a HiddenValueProvider');
   }
-  return context;
+  return context; // { hidden, toggleHidden }
 }
